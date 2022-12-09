@@ -596,5 +596,15 @@ $(function (e) {
     //   });
     // }
   });
-
+  function mobileMenuInit() {
+    const hamburgerMenu = document.querySelector('.navbar-toggler'),
+          navMenu = document.querySelector('.navbar-collapse');
+    if(hamburgerMenu) {
+      hamburgerMenu.addEventListener('click', (e) => {
+        navMenu.classList.toggle('active');
+        hamburgerMenu.classList.toggle('active');
+      });
+    }
+  }
+  mobileMenuInit();
 });
